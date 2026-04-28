@@ -7,7 +7,7 @@ function exit_exception(){
     fi
 }
 
-function switch_branc(){
+function switch_branch(){
     selected=$(git branch --format="%(refname:short)" | fzf --height 40% --layout=reverse --border\
     --preview "git -c color.ui=always log --oneline $(echo {})" --color bg:#222222
     )
